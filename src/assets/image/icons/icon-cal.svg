@@ -1,0 +1,20 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<mask id="path-2-inside-1" fill="white">
+<path d="M37 12C37.5523 12 38 12.4477 38 13V29C38 32.3137 35.3137 35 32 35L8 35C4.68629 35 2 32.3137 2 29V13C2 12.4477 2.44772 12 3 12L37 12Z"/>
+</mask>
+<path d="M37 12C37.5523 12 38 12.4477 38 13V29C38 32.3137 35.3137 35 32 35L8 35C4.68629 35 2 32.3137 2 29V13C2 12.4477 2.44772 12 3 12L37 12Z" stroke="white" stroke-width="4" mask="url(#path-2-inside-1)"/>
+<mask id="path-3-inside-2" fill="white">
+<path d="M32 5C35.3137 5 38 7.68629 38 11V13C38 13.5523 37.5523 14 37 14L3 14C2.44772 14 2 13.5523 2 13V11C2 7.68629 4.68629 5 8 5L32 5Z"/>
+</mask>
+<path d="M32 5C35.3137 5 38 7.68629 38 11V13C38 13.5523 37.5523 14 37 14L3 14C2.44772 14 2 13.5523 2 13V11C2 7.68629 4.68629 5 8 5L32 5Z" stroke="white" stroke-width="4" mask="url(#path-3-inside-2)"/>
+<path d="M10 3V8M30 3V8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 19C16.5523 19 17 19.4477 17 20V26C17 26.5523 16.5523 27 16 27H9C8.44772 27 8 26.5523 8 26L8 20C8 19.4477 8.44771 19 9 19H16Z" stroke="white" stroke-width="2"/>
+<path d="M31 19C31.5523 19 32 19.4477 32 20V26C32 26.5523 31.5523 27 31 27H24C23.4477 27 23 26.5523 23 26V20C23 19.4477 23.4477 19 24 19H31Z" stroke="white" stroke-width="2"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="40" height="40" fill="white"/>
+</clipPath>
+</defs>
+</svg>

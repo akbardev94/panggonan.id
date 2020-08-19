@@ -1,0 +1,179 @@
+{
+  "hero": {
+    "travelers": 80400,
+    "treasures": 8490,
+    "cities": 1329
+  },
+  "mostPicked": [{
+      "_id": "asd1293uasdads1",
+      "name": "Ketapang Hotel",
+      "type": "Hotel",
+      "imageUrl": "/img/most-pick1.png",
+      "country": "Indonesia",
+      "city": "Banyuwangi",
+      "price": "70",
+      "unit": "Night"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Singo Cottage",
+      "type": "Guest House",
+      "imageUrl": "/img/most-pick2.png",
+      "country": "Indonesia",
+      "city": "Malang",
+      "price": "20",
+      "unit": "Night"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Empire Village",
+      "type": "House",
+      "imageUrl": "/img/most-pick3.png",
+      "country": "Indonesia",
+      "city": "Bali",
+      "price": "30",
+      "unit": "Night"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Rikudo Resort",
+      "type": "Apartment",
+      "imageUrl": "/img/most-pick4.png",
+      "country": "Indonesia",
+      "city": "Semarang",
+      "price": "40",
+      "unit": "Night"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Bingo House",
+      "type": "Guest House",
+      "imageUrl": "/img/most-pick5.png",
+      "country": "Indonesia",
+      "city": "Surabaya",
+      "price": "15",
+      "unit": "Night"
+    }
+  ],
+  "categories": [{
+      "_id": "asd1293uasdads1",
+      "name": "Hotels with livingrooms",
+      "items": [{
+          "_id": "asd1293uasdads1",
+          "name": "Sasana Hotel",
+          "imageUrl": "/img/liv-1.png",
+          "country": "Indonesia",
+          "city": "Makassar",
+          "isPopular": true
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Mutiara Hotel",
+          "imageUrl": "/img/liv-2.png",
+          "country": "Indonesia",
+          "city": "Jember",
+          "isPopular": false
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Unggul Hotel ",
+          "imageUrl": "/img/liv-3.png",
+          "country": "Indonesia",
+          "city": "Lamongan",
+          "isPopular": false
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Lasaga Hotela",
+          "imageUrl": "/img/liv-4.png",
+          "country": "Indonesia",
+          "city": "Blitar",
+          "isPopular": false
+        }
+      ]
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "Apartment with kitchen",
+      "items": [{
+          "_id": "asd1293uasdads1",
+          "name": "Asura Apartment",
+          "imageUrl": "/img/kitc-1.png",
+          "country": "Indonesia",
+          "city": "Bogor",
+          "isPopular": false
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Sasori Town",
+          "imageUrl": "/img/kitc-2.png",
+          "country": "Indonesia",
+          "city": "Bandung",
+          "isPopular": false
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Rookie",
+          "imageUrl": "/img/kitc-3.png",
+          "country": "Indonesia",
+          "city": "Banten",
+          "isPopular": false
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Newbie Apart",
+          "imageUrl": "/img/kitc-4.png",
+          "country": "Indonesia",
+          "city": "Jakarta",
+          "isPopular": true
+        }
+      ]
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "name": "House with backyard",
+      "items": [{
+          "_id": "asd1293uasdads1",
+          "name": "Ramen House",
+          "imageUrl": "/img/back-1.png",
+          "country": "Indonesia",
+          "city": "Medan",
+          "isPopular": false
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Jodipan House",
+          "imageUrl": "/img/back-2.png",
+          "country": "Indonesia",
+          "city": "Malang",
+          "isPopular": true
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Samisae House",
+          "imageUrl": "/img/back-3.png",
+          "country": "Indonesia",
+          "city": "Kediri",
+          "isPopular": false
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Singo Cottage",
+          "imageUrl": "/img/back-4.png",
+          "country": "Indonesia",
+          "city": "Surabaya",
+          "isPopular": false
+        }
+      ]
+    }
+  ],
+  "testimonial": {
+    "_id": "asd1293uasdads1",
+    "imageUrl": "/img/image-testi.png",
+    "name": "Happy Family",
+    "rate": 4.45,
+    "content": "What a great trip with family and i should try again and next time soon ...",
+    "familyName": "Anas",
+    "familyOccupation": "Web Developer"
+  }
+}
