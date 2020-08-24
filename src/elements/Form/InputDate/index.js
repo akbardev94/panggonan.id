@@ -54,7 +54,7 @@ export default function Date(props) {
                         <img src={iconCalendar} alt="icon calendar" />
                     </span>
                 </div>
-                <input readOnly type="text" className="form-control" value={displayDate} placeholder={placeholder} onClick={() => setIsShowed(!isShowed)} />
+                <input readOnly type="text" className="form-control font-weight-bold" value={displayDate} placeholder={placeholder} onClick={() => setIsShowed(!isShowed)} />
 
                 {isShowed && (
                     <div className="date-range-wrapper">

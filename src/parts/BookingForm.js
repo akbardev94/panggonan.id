@@ -15,19 +15,19 @@ export default class BookingForm extends Component {
         date: {
           startDate: new Date(),
           endDate: new Date(),
-          key: "selection",
-        },
-      },
+          key: "selection"
+        }
+      }
     };
   }
 
-  updateData = (e) => {
+  updateData = e => {
     this.setState({
       ...this.state,
       data: {
         ...this.state.data,
-        [e.target.name]: e.target.value,
-      },
+        [e.target.name]: e.target.value
+      }
     });
   };
 
@@ -35,14 +35,14 @@ export default class BookingForm extends Component {
     const { data } = this.state;
 
     if (prevState.data.date !== data.date) {
-      const startDate = new Date(data.data.startDate);
-      const endDate = new Date(data.data.endDate);
+      const startDate = new Date(data.date.startDate);
+      const endDate = new Date(data.date.endDate);
       const countDuration = new Date(endDate - startDate).getDate();
       this.setState({
         data: {
           ...this.state.data,
-          duration: countDuration,
-        },
+          duration: countDuration
+        }
       });
     }
 
@@ -57,9 +57,9 @@ export default class BookingForm extends Component {
           ...this.state.data,
           date: {
             ...this.state.data.date,
-            endDate: endDate,
-          },
-        },
+            endDate: endDate
+          }
+        }
       });
     }
   }
@@ -68,16 +68,18 @@ export default class BookingForm extends Component {
     const { data } = this.state;
     const { itemDetails, startBooking } = this.props;
     return (
-      <div className="card-bordered" style={{ padding: "60px 80px" }}>
-        <h4 className="mb-3">Start Booking</h4>
-        <h5 className="h2 text-teal mb-4">
+      <div className="card-bordered border-gray" style={{ padding: "60px 80px" }}>
+        <h4 className="mb-3 font-weight-bold">Start Booking</h4>
+        <h5 className="h2 text-teal mb-4 font-weight-bold">
           ${itemDetails.price}{" "}
-          <span className="text-gray-500 font-weight-light">
+          <span className="text-gray-500 font-weight-bold">
             per {itemDetails.unit}
           </span>
         </h5>
 
-        <label htmlFor="duration">How long you will stay?</label>
+        <label htmlFor="duration" className="font-weight-bold">
+          How long you will stay?
+        </label>
         <InputNumber
           max={30}
           suffix={" night"}
@@ -87,25 +89,33 @@ export default class BookingForm extends Component {
           value={data.duration}
         />
 
-        <label htmlrFor="date">Pick a date</label>
+        <label htmlrFor="date" className="font-weight-bold">
+          Pick a date
+        </label>
         <InputDate onChange={this.updateData} name="date" value={data.date} />
 
         <h6
-          className="text-gray-500 font-weight-light"
+          className="text-gray-500 font-weight-bold"
           style={{ marginBottom: 40 }}
         >
           You will pay{" "}
-          <span className="text-gray-900">
-            ${(itemDetails.price = data.duration)} USD
+          <span className="text-gray-900 font-weight-bold">
+            ${(itemDetails.price * data.duration)} USD
           </span>{" "}
-          per {" "}
-          <span className="text-gray-900">
-              {data.duration} {itemDetails.unit}
+          per{" "}
+          <span className="text-gray-900 font-weight-bold">
+            {data.duration} {itemDetails.unit}
           </span>
         </h6>
 
-        <Button className="btn font-weight-bold" hasShadow isPrimary isBlock onClick={startBooking}>
-            Continue Book
+        <Button
+          className="btn font-weight-bold"
+          hasShadow
+          isPrimary
+          isBlock
+          onClick={startBooking}
+        >
+          Continue Book
         </Button>
       </div>
     );
