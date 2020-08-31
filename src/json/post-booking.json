@@ -3,11 +3,11 @@
   "price": "240",
   "bookingDateStart": "new Date()",
   "bookingDateEnd": "new Date()",
-  "firstName": "Angga",
-  "lastName": "Risky",
-  "emailAddress": "angga@buildwithangga.com",
-  "phoneNumber": "081923012380",
-  "accountHolder": "Angga Risky",
-  "bankFrom": "BCA",
+  "firstName": "Anas",
+  "lastName": "Maulana Akbar",
+  "emailAddress": "akbar.maulana449@gmail.com",
+  "phoneNumber": "085234340042",
+  "accountHolder": "Anas Maulana Akbar",
+  "bankFrom": "BNI",
   "proofPayment": "FileData()"
 }

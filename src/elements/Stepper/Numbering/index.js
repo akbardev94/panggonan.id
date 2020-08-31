@@ -20,7 +20,7 @@ export default function Numbering({ style, className, data, current }) {
           
           return (
               <li key={`list-${index}`} className={[isActive].join(" ")}>
-                  {index+1}
+                  {index + 1}
               </li>
           );
 

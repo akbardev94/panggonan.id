@@ -11,8 +11,8 @@ export default function PageDetailDescription({ data }) {
                     return (
                         <div key={`feature-${index}`} className="col-3" style={{ marginBottom: 20 }}>
                             <img width="38" className="d-block mb-2" src={feature.imageUrl} alt={feature.name} />{" "}
-                            <span>{feature.qty}</span>{" "}
-                            <span className="text-gray-500 font-weight-light">
+                            <span className="font-weight-bold">{feature.qty}</span>{" "}
+                            <span className="text-gray-500 font-weight-bold">
                                 {feature.name}
                             </span>
                         </div>

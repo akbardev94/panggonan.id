@@ -73,7 +73,7 @@ Text.defaultProps = {
   type: "text",
   pattern: "",
   placeholder: "Please type here...",
-  errorResponse: "Please match the requested  format.",
+  errorResponse: "Please match the requested format.",
 };
 
 Text.propTypes = {

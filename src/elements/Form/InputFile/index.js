@@ -3,7 +3,7 @@ import propTypes from "prop-types";
 
 import "./index.scss";
 
-export default function Text(props) {
+export default function File(props) {
   const {
     value,
     placeholder,

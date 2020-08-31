@@ -15,7 +15,7 @@ export default function Button(props) {
     }
 
     if (props.isDisabled || props.isLoading) {
-        if (props.isDisabled) className.push("disabled")
+        if (props.isDisabled) className.push("disabled");
         return (<span className={className.join("")}
             style={props.style}>
             {
@@ -23,7 +23,7 @@ export default function Button(props) {
                     <span className="spinner-border spinner-border-sm mx-5"></span>
                     <span className="sr-only">Loading...</span>
                 </>) : (
-                        props.isLoading
+                        props.children
                     )
             }
         </span>
@@ -39,16 +39,16 @@ export default function Button(props) {
                     style={props.style}
                     target={props.target === "_blank" ? "_blank" : undefined}
                     rel={props.target === "_blank" ? "noopener noreferrer" : undefined} >
-                    {props.children}</a >
+                    {props.children}</a>
             );
         } else {
             return (
                 <Link to={props.href}
-                    className={className.join("")}
+                    className={className.join(" ")}
                     style={props.style} onClick={onClick}>
                     {props.children}
                 </Link>
-            )
+            );
         }
     }
 
