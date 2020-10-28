@@ -24,7 +24,7 @@ export default function mostPicked(props) {
                       <img
                         src={
                           item.imageId[0]
-                            ? `${process.env.REACT_APP_HOST}${item.imageId[0].imageUrl}`
+                            ? `${process.env.REACT_APP_HOST}/${item.imageId[0].imageUrl}`
                             : ""
                         }
                         alt={item.title}

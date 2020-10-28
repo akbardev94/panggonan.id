@@ -17,6 +17,8 @@ import Completed from "parts/Checkout/Completed";
 
 import ItemDetails from "json/itemDetails.json";
 
+import { submitBooking } from "store/actions/checkout";
+
 class Checkout extends Component {
   state = {
     data: {
@@ -43,21 +45,49 @@ class Checkout extends Component {
     window.scroll(0, 0);
   }
 
-  render() {
+  _Submit = (nextStep) => {
     const { data } = this.state;
     const { checkout } = this.props;
 
+    const payload = new FormData();
+    payload.append("firstName", data.firstName);
+    payload.append("lastName", data.lastName);
+    payload.append("email", data.email);
+    payload.append("phoneNumber", data.phone);
+    payload.append("itemId", checkout._id);
+    payload.append("duration", checkout.duration);
+    payload.append("bookingStartDate", checkout.date.startDate);
+    payload.append("bookingEndDate", checkout.date.endDate);
+    payload.append("accountHolder", data.bankHolder);
+    payload.append("bankFrom", data.bankName);
+    payload.append("image", data.proofPayment[0]);
+    // payload.append("bankId", checkout.bankId);
+
+    this.props.submitBooking(payload).then(() => {
+      nextStep();
+    });
+  };
+
+  render() {
+    const { data } = this.state;
+    const { checkout, page } = this.props;
+    console.log(page, data);
     if (!checkout)
       return (
         <div className="container">
           <div
             className="row align-items-center justify-content-center text-center"
-            style={{ height: "180vh" }}
+            style={{ height: "100vh" }}
           >
             <div className="col-3">
-              Pilih Kamar Dulu
+              Pilih kamar dulu
               <div>
-                <Button className="btn btn-light mt-5" type="link" href="/">
+                <Button
+                  className="btn mt-5"
+                  type="button"
+                  onClick={() => this.props.history.goBack()}
+                  isLight
+                >
                   Back
                 </Button>
               </div>
@@ -74,7 +104,7 @@ class Checkout extends Component {
           <BookingInformation
             data={data}
             checkout={checkout}
-            ItemDetails={ItemDetails}
+            ItemDetails={page[checkout._id]}
             onChange={this.onChange}
           />
         ),
@@ -85,14 +115,14 @@ class Checkout extends Component {
         content: (
           <Payment
             data={data}
-            ItemDetails={ItemDetails}
+            ItemDetails={page[checkout._id]}
             checkout={checkout}
             onChange={this.onChange}
           />
         ),
       },
       completed: {
-        title: "Horee!! Completed",
+        title: "Yay! Completed",
         description: null,
         content: <Completed />,
       },
@@ -102,7 +132,7 @@ class Checkout extends Component {
       <>
         <Header isCentered />
 
-        <Stepper steps={steps} initialStep="bookingInformation">
+        <Stepper steps={steps}>
           {(prevStep, nextStep, CurrentStep, steps) => (
             <>
               <Numbering
@@ -123,9 +153,10 @@ class Checkout extends Component {
                     data.phone !== "" && (
                       <Fade>
                         <Button
-                          className="btn btn-success mb-3 font-weight-bold"
+                          className="btn mb-3"
                           type="button"
                           isBlock
+                          isPrimary
                           hasShadow
                           onClick={nextStep}
                         >
@@ -134,10 +165,10 @@ class Checkout extends Component {
                       </Fade>
                     )}
                   <Button
-                    className="btn btn-light"
+                    className="btn"
                     type="link"
                     isBlock
-                    hasShadow
+                    isLight
                     href={`/properties/${ItemDetails._id}`}
                   >
                     Cancel
@@ -152,21 +183,22 @@ class Checkout extends Component {
                     data.bankHolder !== "" && (
                       <Fade>
                         <Button
-                          className="btn btn-success mb-3 font-weight-bold"
+                          className="btn mb-3"
                           type="button"
                           isBlock
+                          isPrimary
                           hasShadow
-                          onClick={nextStep}
+                          onClick={() => this._Submit(nextStep)}
                         >
                           Continue to Book
                         </Button>
                       </Fade>
                     )}
                   <Button
-                    className="btn btn-light"
+                    className="btn"
                     type="button"
                     isBlock
-                    hasShadow
+                    isLight
                     onClick={prevStep}
                   >
                     Cancel
@@ -177,9 +209,10 @@ class Checkout extends Component {
               {CurrentStep === "completed" && (
                 <Controller>
                   <Button
-                    className="btn btn-success font-weight-bold"
+                    className="btn"
                     type="link"
                     isBlock
+                    isPrimary
                     hasShadow
                     href=""
                   >
@@ -197,6 +230,7 @@ class Checkout extends Component {
 
 const mapStateToProps = (state) => ({
   checkout: state.checkout,
+  page: state.page,
 });
 
-export default connect(mapStateToProps)(Checkout);
+export default connect(mapStateToProps, { submitBooking })(Checkout);

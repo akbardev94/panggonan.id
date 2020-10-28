@@ -21,7 +21,7 @@ class LandingPage extends Component {
 
     if (!this.props.page.landingPage)
       this.props.fetchPage(
-        `https://admin-panggonan.herokuapp.com/api/v1/member/landing-page`,
+        `/landing-page`,
         "landingPage"
       );
   }
@@ -29,7 +29,7 @@ class LandingPage extends Component {
   render() {
     const { page } = this.props;
 
-    console.log(page);
+    console.log(page)
 
     if (!page.hasOwnProperty("landingPage")) return null;
 
@@ -41,7 +41,7 @@ class LandingPage extends Component {
           refMostPicked={this.refMostPicked}
           data={page.landingPage.mostPicked}
         />
-        <Categories data={page.landingPage.categories} />
+        <Categories data={page.landingPage.category} /> 
         <Testimony data={page.landingPage.testimonial} />
         <Footer />
       </>
