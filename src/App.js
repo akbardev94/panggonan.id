@@ -1,6 +1,7 @@
 import React from "react";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
+import {ToastContainer} from "react-toastify";
 
 import LandingPage from "pages/LandingPage";
 import DetailsPage from "pages/DetailsPage";
@@ -23,6 +24,8 @@ function App() {
           <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </Router>
+
+      <ToastContainer />
     </div>
   );
 }

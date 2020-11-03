@@ -32,7 +32,7 @@ export default function Activities({ data }) {
                             ? `${process.env.REACT_APP_HOST}/${item.imageUrl}`
                             : ""
                         }
-                        alt={item.name}
+                        alt={item.title}
                         className="img-cover"
                       />
                     </figure>
